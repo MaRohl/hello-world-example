@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Results') {
       steps {
-        junit '**/TEST-*.xml'
+        junit '**/target/TEST-*.xml'
         archiveArtifacts 'target/*.jar'
       }
     }
