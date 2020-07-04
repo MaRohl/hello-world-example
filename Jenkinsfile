@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Results') {
       steps {
-        junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
+        junit allowEmptyResults: true, testResults: '**/target/surefire-reports/TEST-*.xml'
         archiveArtifacts 'target/*.jar'
       }
     }
